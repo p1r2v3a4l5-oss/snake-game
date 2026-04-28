@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Anton", sans-serif;
+
+  --color-magenta-400: #ff55ff;
+  --color-magenta-500: #ff00ff;
+  --color-cyan-400: #00ffff;
+  --color-cyan-500: #00cccc;
+}
+
+@layer utilities {
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+
+  .decoration-delay-1000 {
+    animation-delay: 1s;
+  }
+}
+
+body {
+    background: #050505;
+    color: white;
+}
